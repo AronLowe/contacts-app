@@ -1,0 +1,28 @@
+<h1>Contact List</h1>
+
+<% if current_user %>
+<h> <br> <a href="/logout">log out</a> </h>
+<% else %>
+<h> <br> <a href="/sign up">sign up</a> </h>
+<h> <br> <a href="/login">log in</a> </h>
+<% end %>
+<br>
+<a href="/contacts/new">Create New Contact</a>
+<p> <% @contacts.each do |contact| %> </p>
+<p1> First Name: <%= contact.first_name %> </p1>
+<p1> <br> Middle Name: <%= contact.middle_name %> </p1>
+<p2> <br> Last Name: <%= contact.last_name %> </p2>
+<p3> <br> Full Name: <%= contact.full_name %> </p3>
+<p3> <br> Email: <%= contact.email %> </p3>
+<p4> <br> Phone Number: <%= contact.phone_number %> </p4>
+<p4> <br> Bio: <%= contact.bio %> </p4>
+<p5> <br> <a href="/contacts/<%= contact.id %>">More Info</a>
+<p6> <br> Added <%= contact.friendly_created_at %> </p6>
+<%end%>
+
+<!-- peter [8:19 PM] 
+Exercise: Make database changes to your Contacts App
+
+• Add a middle name attribute to the contacts model. Also be sure to update your form in your new.html.erb file, to make sure users can enter and save their middle name. The attribute should be a string.
+
+• Add a bio attribute. Be careful to choose the right datatype; someone’s bio can be more than a few sentences. Again, update your form and make sure it works. -->
