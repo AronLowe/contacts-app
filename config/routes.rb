@@ -15,5 +15,5 @@
   post "/login" => "sessions#create"
   get "/logout" => "sessions#destroy"
 
-end
+ end
 

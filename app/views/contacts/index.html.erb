@@ -1,14 +1,14 @@
 <h1>Contact List</h1>
 
 <% if current_user %>
-<h> <br> <a href="/logout">log out</a> </h>
+<h> <br> <a href="/logout">LOGOUT</a> </h>
 <% else %>
-<h> <br> <a href="/sign up">sign up</a> </h>
-<h> <br> <a href="/login">log in</a> </h>
+<h> <br> <a href="/sign up">SIGN UP</a> </h>
+<h> <br> <a href="/login">LOGIN</a> </h>
 <% end %>
 <br>
 <a href="/contacts/new">Create New Contact</a>
-<p> <% @contacts.each do |contact| %> </p>
+ <p> <% @contacts.each do |contact| %> </p> 
 <p1> First Name: <%= contact.first_name %> </p1>
 <p1> <br> Middle Name: <%= contact.middle_name %> </p1>
 <p2> <br> Last Name: <%= contact.last_name %> </p2>
